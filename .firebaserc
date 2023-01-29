@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ite-testing": {
+      "hosting": {
+        "ite-ng-testing": [
+          "ite-testing"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ite-testing"
+  }
+}
