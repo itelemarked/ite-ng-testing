@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve-pwa": "ng build && npx http-server -c-1 dist/ite-ng-testing"
   },
   "private": true,
   "dependencies": {
