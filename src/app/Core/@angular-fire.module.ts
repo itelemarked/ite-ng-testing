@@ -1,10 +1,14 @@
 import { NgModule } from "@angular/core";
 
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideMessaging,getMessaging } from '@angular/fire/messaging';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
+// import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+// import { provideAuth,getAuth } from '@angular/fire/auth';
+// import { provideDatabase,getDatabase } from '@angular/fire/database';
+// import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+// import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 
 
 
@@ -20,11 +24,15 @@ const firebaseConfig = {
 
 @NgModule({
   imports: [
-    provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()),
-    provideMessaging(() => getMessaging()),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule.enablePersistence()
+
+    // provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    // provideAuth(() => getAuth()),
+    // provideDatabase(() => getDatabase()),
+    // provideFirestore(() => getFirestore()),
+    // provideMessaging(() => getMessaging()),
   ]
 })
-export class AngularFireModule {}
+export class IteAngularFireModule {}

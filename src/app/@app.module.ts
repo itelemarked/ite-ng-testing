@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { AngularFireModule } from './Core/@angular-fire.module';
+import { IteAngularFireModule } from './Core/@angular-fire.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 
@@ -24,7 +24,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    AngularFireModule,
+    IteAngularFireModule,
     IonicModule.forRoot(),
     ServiceWorkerModule.register('ite-service-worker.js', {
       enabled: environment.production,
