@@ -33,6 +33,7 @@
     "@angular/compiler-cli": "^14.2.0",
     "@ionic/angular-toolkit": "latest",
     "@types/jasmine": "~4.0.0",
+    "firebase-tools": "^11.21.0",
     "http-server": "^14.1.1",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",

@@ -26,12 +26,17 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/manifest.webmanifest",
               {
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
               },
-              "src/manifest.webmanifest"
+              {
+                "glob": "ite-service-worker.js",
+                "input": "src/app/Core/service-worker",
+                "output": "./"
+              }
             ],
             "styles": [
               "src/styles.scss",
@@ -71,7 +76,7 @@
             ],
             "scripts": [],
             "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "ngswConfigPath": "src/app/Core/service-worker/ngsw-config.json"
           },
           "configurations": {
             "production": {
